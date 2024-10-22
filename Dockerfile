@@ -5,12 +5,12 @@ FROM php:8.2-apache
 WORKDIR /var/www/html
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y \
+RUN RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     build-essential \
     libpng-dev \
     libjpeg62-turbo-dev \
     libfreetype6-dev \
-    libonig-dev \ git add Dockerfile
+    libonig-dev \
     zip \
     vim \
     unzip \
